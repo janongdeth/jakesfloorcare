@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Floor Care & Epoxy Services | Jake's Floor Care | NE Indiana</title>
+<meta name="description" content="From carpet cleaning and tile restoration to epoxy flooring and industrial coatings — Jake's Floor Care handles every surface in your home or business. Serving NE Indiana.">
+<link rel="canonical" href="https://jakesfloorcare.com/services">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+
+<style>
+/* ========================================
+   SERVICES HUB — PAGE-SPECIFIC STYLES
+   ======================================== */
+.services-intro {
+  padding: 80px 0 0;
+}
+
+.services-intro p {
+  font-size: 19px;
+  color: var(--gray-600);
+  max-width: 640px;
+  line-height: 1.75;
+}
+
+/* Cluster section */
+.service-cluster {
+  padding: 80px 0;
+  border-top: 1px solid var(--gray-100);
+}
+
+.service-cluster:first-of-type {
+  border-top: none;
+}
+
+.cluster-header {
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+  margin-bottom: 56px;
+}
+
+.cluster-number {
+  font-family: var(--ff-heading);
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 1;
+  color: var(--gray-100);
+  letter-spacing: -2px;
+}
+
+.cluster-title {
+  font-family: var(--ff-heading);
+  font-weight: 700;
+  font-size: 28px;
+  letter-spacing: 3px;
+  color: var(--black);
+  position: relative;
+  padding-left: 20px;
+  border-left: 3px solid var(--blue);
+}
+
+/* Service items grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+
+.service-item {
+  display: block;
+  text-decoration: none;
+  padding: 36px 32px;
+  border: 1px solid var(--gray-100);
+  margin: -1px 0 0 -1px;
+  position: relative;
+  transition: all 0.3s;
+}
+
+.service-item:hover {
+  background: var(--off-white);
+  z-index: 1;
+  border-color: var(--blue);
+}
+
+.service-item-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.service-name {
+  font-family: var(--ff-heading);
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: 1px;
+  color: var(--black);
+  line-height: 1.2;
+  transition: color 0.2s;
+}
+
+.service-item:hover .service-name {
+  color: var(--blue);
+}
+
+.service-arrow {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border: 1.5px solid var(--gray-300);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: var(--gray-300);
+  transition: all 0.3s;
+  margin-top: 2px;
+}
+
+.service-item:hover .service-arrow {
+  border-color: var(--blue);
+  color: var(--blue);
+  transform: translateX(4px);
+}
+
+.service-desc {
+  margin-top: 12px;
+  font-size: 15px;
+  color: var(--gray-600);
+  line-height: 1.65;
+}
+
+/* Odd item in last row full-width */
+.services-grid .service-item.full-width {
+  grid-column: 1 / -1;
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+@media (max-width: 768px) {
+  .services-intro { padding: 48px 0 0; }
+
+  .cluster-header {
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 32px;
+  }
+
+  .cluster-number { font-size: 48px; }
+  .cluster-title { font-size: 20px; letter-spacing: 2px; }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-item {
+    padding: 28px 20px;
+  }
+
+  .service-name { font-size: 18px; }
+  .service-cluster { padding: 48px 0; }
+}
+</style>
+</head>
+<body>
+
+<!-- ==================== HEADER ==================== -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="logo"><img src="/images/logo-transparent.png" alt="Jake's Floor Care" width="50" height="50"></a>
+    <button class="menu-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <nav>
+      <ul class="main-nav" id="mainNav">
+        <li class="has-dropdown">
+          <button type="button">Services <span class="nav-arrow"></span></button>
+          <ul class="dropdown wide">
+            <li class="dropdown-label">Cleaning &amp; Maintenance</li>
+            <li class="dropdown-label">Coatings &amp; Epoxy</li>
+            <li><a href="/services/carpet-cleaning">Carpet Cleaning</a></li>
+            <li><a href="/services/epoxy-flooring">Epoxy Flooring</a></li>
+            <li><a href="/services/tile-and-grout-cleaning">Tile &amp; Grout Cleaning</a></li>
+            <li><a href="/services/metallic-and-marble-epoxy">Metallic &amp; Marble Epoxy</a></li>
+            <li><a href="/services/tile-resurfacing">Tile Resurfacing</a></li>
+            <li><a href="/services/concrete-coatings">Concrete Coatings</a></li>
+            <li><a href="/services/upholstery-cleaning">Upholstery Cleaning</a></li>
+            <li><a href="/services/decorative-concrete">Decorative Concrete</a></li>
+            <li><a href="/services/floor-waxing">Floor Waxing</a></li>
+            <li><a href="/services/commercial-flooring">Commercial Flooring</a></li>
+            <li><a href="/services/industrial-flooring">Industrial Flooring</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown">
+          <button type="button">Service Areas <span class="nav-arrow"></span></button>
+          <ul class="dropdown">
+            <li><a href="/service-areas/fort-wayne">Fort Wayne</a></li>
+            <li><a href="/service-areas/kendallville">Kendallville</a></li>
+            <li><a href="/service-areas/auburn">Auburn</a></li>
+            <li><a href="/service-areas/angola">Angola</a></li>
+            <li><a href="/service-areas/columbia-city">Columbia City</a></li>
+            <li><a href="/service-areas/warsaw">Warsaw</a></li>
+            <li><a href="/service-areas/goshen">Goshen</a></li>
+            <li><a href="/service-areas/huntington">Huntington</a></li>
+            <li><a href="/service-areas/decatur">Decatur</a></li>
+            <li><a href="/service-areas/wolcottville">Wolcottville</a></li>
+          </ul>
+        </li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/reviews">Reviews</a></li>
+      </ul>
+    </nav>
+    <a href="tel:+12603431775" class="header-phone">(260) 343-1775</a>
+    <a href="/contact" class="header-cta">Free Quote</a>
+  </div>
+</header>
+
+<!-- ==================== PAGE HEADER ==================== -->
+<div class="page-header">
+  <div class="container">
+    <div class="breadcrumbs">
+      <a href="/">Home</a>
+      <span class="sep">/</span>
+      <span>Services</span>
+    </div>
+    <h1 class="page-title">Our Services</h1>
+    <p class="page-subtitle">Every surface. Every space. Done right.</p>
+  </div>
+</div>
+
+<!-- ==================== INTRO ==================== -->
+<section class="services-intro">
+  <div class="container reveal">
+    <p>From routine carpet cleaning to full-floor epoxy transformations — we handle every surface in your home or business. Over 10 years of hands-on experience, BBB A+ rated, and always a free quote before any work begins.</p>
+  </div>
+</section>
+
+<!-- ==================== CLUSTER 01: CLEANING & MAINTENANCE ==================== -->
+<section class="service-cluster">
+  <div class="container">
+    <div class="cluster-header reveal">
+      <span class="cluster-number">01</span>
+      <h2 class="cluster-title">Cleaning &amp; Maintenance</h2>
+    </div>
+
+    <div class="services-grid">
+      <a href="/services/carpet-cleaning" class="service-item reveal">
+        <div class="service-item-top">
+          <h3 class="service-name">Carpet Cleaning</h3>
+          <span class="service-arrow">&#8594;</span>
+        </div>
+        <p class="service-desc">Deep extraction cleaning for homes and offices. We pull out the dirt your vacuum leaves behind.</p>
+      </a>
+
+      <a href="/services/tile-and-grout-cleaning" class="service-item reveal">
+        <div class="service-item-top">
+          <h3 class="service-name">Tile &amp; Grout Cleaning</h3>
+          <span class="service-arrow">&#8594;</span>
+        </div>
+        <p class="service-desc">Restore tile and grout to their original finish. No amount of scrubbing at home gets these results.</p>
+      </a>
+
+      <a href="/services/tile-resurfacing" class="service-item reveal">
+        <div class="service-item-top">
+          <h3 class="service-name">Tile Resurfacing</h3>
+          <span class="service-arrow">&#8594;</span>
+        </div>
+        <p class="service-desc">Refinish worn tile without full replacement. New look, fraction of the cost.</p>
+      </a>
+
+      <a href="/services/upholstery-cleaning" class="service-item reveal">
+        <div class="service-item-top">
+          <h3 class="service-name">Upholstery Cleaning</h3>
+          <span class="service-arrow">&#8594;</span>
+        </div>
+        <p class="service-desc">Furniture, couches, and fabric care. We treat every piece like it's our own.</p>
+      </a>
+
+      <a href="/services/floor-waxing" class="service-item full-width reveal">
+        <div class="service-item-top">
+          <h3 class="service-name">Floor Waxing</h3>
+          <span class="service-arrow">&#8594;</span>
+        </div>
+        <p class="service-desc">Strip, seal, and wax for a lasting shine. The kind of floor that makes people notice when they walk in.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CLUSTER 02: COATINGS & EPOXY ==================== -->
+<section class="service-cluster">
+  <div class="container">
+    <div class="cluster-header reveal">
+      <span class="cluster-number">02</span>
+      <h2 class="cluster-title">Coatings &amp; Epoxy</h2>
+    </div>
+
+    <div class="services-grid">
+      <a href="/services/epoxy-flooring" class="service-item reveal">
+        <div class="service-item-top">
+          <h3 class="service-name">Epoxy Flooring</h3>
+          <span class="service-arrow">&#8594;</span>
+        </div>
+        <p class="service-desc">Durable, seamless flooring for any space. Garages, basements, shops — built to take a beating.</p>
+      </a>
+
+      <a href="/services/metallic-and-marble-epoxy" class="service-item reveal">
+        <div class="service-item-top">
+          <h3 class="service-name">Metallic &amp; Marble Epoxy</h3>
+          <span class="service-arrow">&#8594;</span>
+        </div>
+        <p class="service-desc">Showroom-quality decorative finishes. No two floors look alike — each one is a one-of-a-kind pour.</p>
+      </a>
+
+      <a href="/services/concrete-coatings" class="service-item reveal">
+        <div class="service-item-top">
+          <h3 class="service-name">Concrete Coatings</h3>
+          <span class="service-arrow">&#8594;</span>
+        </div>
+        <p class="service-desc">Protect and beautify concrete surfaces. Patios, driveways, warehouse floors — we coat it all.</p>
+      </a>
+
+      <a href="/services/decorative-concrete" class="service-item reveal">
+        <div class="service-item-top">
+          <h3 class="service-name">Decorative Concrete</h3>
+          <span class="service-arrow">&#8594;</span>
+        </div>
+        <p class="service-desc">Custom staining, stamping, and finishes. Turn plain concrete into something worth showing off.</p>
+      </a>
+
+      <a href="/services/commercial-flooring" class="service-item reveal">
+        <div class="service-item-top">
+          <h3 class="service-name">Commercial Flooring</h3>
+          <span class="service-arrow">&#8594;</span>
+        </div>
+        <p class="service-desc">Solutions built for high-traffic spaces. Retail, office, restaurant — we match the floor to the demand.</p>
+      </a>
+
+      <a href="/services/industrial-flooring" class="service-item full-width reveal">
+        <div class="service-item-top">
+          <h3 class="service-name">Industrial Flooring</h3>
+          <span class="service-arrow">&#8594;</span>
+        </div>
+        <p class="service-desc">Heavy-duty coatings for warehouses and plants. Chemical-resistant, impact-resistant, built to last.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CTA BAND ==================== -->
+<section class="cta-band">
+  <div class="container reveal">
+    <h2 class="cta-title">Ready to Talk Floors?</h2>
+    <p class="cta-sub">Free quotes, honest pricing, no pressure. That's how we've always done it.</p>
+    <a href="/contact" class="btn-white">Get a Free Quote</a>
+    <a href="tel:+12603431775" class="cta-phone">(260) 343-1775</a>
+  </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="logo"><img src="/images/logo-transparent.png" alt="Jake's Floor Care"></a>
+        <p>Carpet cleaning, epoxy coatings, and floor care across northeast Indiana. Family-owned since 2016.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="/services/carpet-cleaning">Carpet Cleaning</a></li>
+          <li><a href="/services/tile-and-grout-cleaning">Tile &amp; Grout Cleaning</a></li>
+          <li><a href="/services/tile-resurfacing">Tile Resurfacing</a></li>
+          <li><a href="/services/upholstery-cleaning">Upholstery Cleaning</a></li>
+          <li><a href="/services/floor-waxing">Floor Waxing</a></li>
+          <li><a href="/services/epoxy-flooring">Epoxy Flooring</a></li>
+          <li><a href="/services/concrete-coatings">Concrete Coatings</a></li>
+          <li><a href="/services/commercial-flooring">Commercial Flooring</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Service Areas</h4>
+        <ul>
+          <li><a href="/service-areas/fort-wayne">Fort Wayne</a></li>
+          <li><a href="/service-areas/kendallville">Kendallville</a></li>
+          <li><a href="/service-areas/auburn">Auburn</a></li>
+          <li><a href="/service-areas/angola">Angola</a></li>
+          <li><a href="/service-areas/columbia-city">Columbia City</a></li>
+          <li><a href="/service-areas/warsaw">Warsaw</a></li>
+          <li><a href="/service-areas/goshen">Goshen</a></li>
+          <li><a href="/service-areas/huntington">Huntington</a></li>
+          <li><a href="/service-areas/decatur">Decatur</a></li>
+          <li><a href="/service-areas/wolcottville">Wolcottville</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact-item"><strong>Phone</strong><a href="tel:+12603431775">(260) 343-1775</a></div>
+        <div class="footer-contact-item"><strong>Office</strong><span>11511 E 1150 N-57<br>Wolcottville, IN 46795</span></div>
+        <div class="footer-contact-item"><strong>Hours</strong><span>Mon–Sat: 7am – 7pm<br>Sunday: Closed</span></div>
+        <ul style="list-style:none;margin-top:20px;">
+          <li style="margin-bottom:6px;"><a href="/about" style="font-size:13px;color:var(--gray-400);text-decoration:none;">About</a></li>
+          <li style="margin-bottom:6px;"><a href="/reviews" style="font-size:13px;color:var(--gray-400);text-decoration:none;">Reviews</a></li>
+          <li><a href="/contact" style="font-size:13px;color:var(--gray-400);text-decoration:none;">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Jake's Floor Care. All rights reserved.</span>
+      <div><a href="/privacy">Privacy</a><a href="/sitemap">Sitemap</a></div>
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-sticky">
+  <div class="mobile-sticky-inner">
+    <a href="tel:+12603431775" class="sticky-call">Call Now</a>
+    <a href="/contact" class="sticky-quote">Free Quote</a>
+  </div>
+</div>
+
+<script src="/script.js"></script>
+</body>
+</html>

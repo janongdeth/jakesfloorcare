@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Jake's Floor Care | Family-Owned Floor Specialists in NE Indiana</title>
+<meta name="description" content="Meet Jake Lazzarino — owner of Jake's Floor Care. 10+ years of carpet cleaning, epoxy flooring, and concrete coatings across NE Indiana. BBB A+ rated, Angi Award winner.">
+<link rel="canonical" href="https://jakesfloorcare.com/about">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+
+<!-- Schema: LocalBusiness + AboutPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": "About Jake's Floor Care",
+  "url": "https://jakesfloorcare.com/about",
+  "mainEntity": {
+    "@type": "LocalBusiness",
+    "name": "Jake's Floor Care",
+    "founder": {
+      "@type": "Person",
+      "name": "Jacob Lazzarino"
+    },
+    "foundingDate": "2016-01",
+    "description": "Family-owned floor care and coatings company serving northeast Indiana since 2016. Carpet cleaning, epoxy flooring, concrete coatings, and more.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "11511 E 1150 N-57",
+      "addressLocality": "Wolcottville",
+      "addressRegion": "IN",
+      "postalCode": "46795",
+      "addressCountry": "US"
+    },
+    "telephone": "+1-260-343-1775",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+        "opens": "07:00",
+        "closes": "19:00"
+      }
+    ],
+    "areaServed": [
+      {"@type": "City", "name": "Fort Wayne", "containedInPlace": {"@type": "State", "name": "Indiana"}},
+      {"@type": "City", "name": "Kendallville", "containedInPlace": {"@type": "State", "name": "Indiana"}},
+      {"@type": "City", "name": "Auburn", "containedInPlace": {"@type": "State", "name": "Indiana"}},
+      {"@type": "City", "name": "Angola", "containedInPlace": {"@type": "State", "name": "Indiana"}},
+      {"@type": "City", "name": "Columbia City", "containedInPlace": {"@type": "State", "name": "Indiana"}},
+      {"@type": "City", "name": "Warsaw", "containedInPlace": {"@type": "State", "name": "Indiana"}},
+      {"@type": "City", "name": "Goshen", "containedInPlace": {"@type": "State", "name": "Indiana"}},
+      {"@type": "City", "name": "Huntington", "containedInPlace": {"@type": "State", "name": "Indiana"}},
+      {"@type": "City", "name": "Decatur", "containedInPlace": {"@type": "State", "name": "Indiana"}},
+      {"@type": "City", "name": "Wolcottville", "containedInPlace": {"@type": "State", "name": "Indiana"}}
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "bestRating": "5",
+      "ratingCount": "1"
+    },
+    "award": ["BBB A+ Rating", "Angi Award Winner"]
+  }
+}
+</script>
+
+<style>
+/* ========================================
+   ABOUT PAGE — LOCAL STYLES
+   ======================================== */
+.about-intro {
+  background: var(--off-white);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.about-photo {
+  aspect-ratio: 4 / 5;
+  background: var(--gray-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--ff-heading);
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: var(--gray-400);
+  border-left: 4px solid var(--blue);
+}
+
+.about-text h2 {
+  font-family: var(--ff-heading);
+  font-weight: 700;
+  font-size: clamp(36px, 4vw, 48px);
+  color: var(--black);
+  line-height: 1;
+  margin-bottom: 24px;
+  letter-spacing: -0.5px;
+}
+
+.about-text p {
+  margin-bottom: 20px;
+  color: var(--gray-600);
+  line-height: 1.75;
+}
+
+.about-text p:last-child { margin-bottom: 0; }
+
+.about-text .highlight {
+  color: var(--blue);
+  font-weight: 600;
+}
+
+/* ========================================
+   WHY JAKE'S SECTION
+   ======================================== */
+.why-jakes {
+  background: var(--off-white);
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 48px;
+}
+
+.why-card {
+  background: #fff;
+  padding: 40px 32px;
+  border-top: 3px solid var(--blue);
+}
+
+.why-number {
+  font-family: var(--ff-heading);
+  font-weight: 700;
+  font-size: 48px;
+  color: var(--gray-200);
+  line-height: 1;
+  margin-bottom: 16px;
+}
+
+.why-card h3 {
+  font-family: var(--ff-heading);
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 1px;
+  color: var(--black);
+  margin-bottom: 12px;
+}
+
+.why-card p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--gray-600);
+}
+
+/* ========================================
+   SERVICE AREA SECTION
+   ======================================== */
+.about-areas {
+  background: #fff;
+}
+
+.areas-text {
+  max-width: 700px;
+}
+
+.areas-text p {
+  color: var(--gray-600);
+  line-height: 1.75;
+  margin-bottom: 16px;
+}
+
+.areas-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  margin-top: 24px;
+  list-style: none;
+}
+
+.areas-list li {
+  font-family: var(--ff-heading);
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  color: var(--black);
+  padding: 8px 16px;
+  border: 1px solid var(--gray-200);
+  transition: all 0.2s;
+}
+
+.areas-list li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.areas-list li:hover {
+  border-color: var(--blue);
+  color: var(--blue);
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .about-photo {
+    aspect-ratio: 16 / 9;
+    order: -1;
+  }
+
+  .why-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .why-card { padding: 28px 24px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ==================== HEADER ==================== -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="logo"><img src="/images/logo-transparent.png" alt="Jake's Floor Care" width="50" height="50"></a>
+    <button class="menu-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <nav>
+      <ul class="main-nav" id="mainNav">
+        <li class="has-dropdown">
+          <button type="button">Services <span class="nav-arrow"></span></button>
+          <ul class="dropdown wide">
+            <li class="dropdown-label">Cleaning &amp; Maintenance</li>
+            <li class="dropdown-label">Coatings &amp; Epoxy</li>
+            <li><a href="/services/carpet-cleaning">Carpet Cleaning</a></li>
+            <li><a href="/services/epoxy-flooring">Epoxy Flooring</a></li>
+            <li><a href="/services/tile-and-grout-cleaning">Tile &amp; Grout Cleaning</a></li>
+            <li><a href="/services/metallic-and-marble-epoxy">Metallic &amp; Marble Epoxy</a></li>
+            <li><a href="/services/tile-resurfacing">Tile Resurfacing</a></li>
+            <li><a href="/services/concrete-coatings">Concrete Coatings</a></li>
+            <li><a href="/services/upholstery-cleaning">Upholstery Cleaning</a></li>
+            <li><a href="/services/decorative-concrete">Decorative Concrete</a></li>
+            <li><a href="/services/floor-waxing">Floor Waxing</a></li>
+            <li><a href="/services/commercial-flooring">Commercial Flooring</a></li>
+            <li><a href="/services/industrial-flooring">Industrial Flooring</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown">
+          <button type="button">Service Areas <span class="nav-arrow"></span></button>
+          <ul class="dropdown">
+            <li><a href="/service-areas/fort-wayne">Fort Wayne</a></li>
+            <li><a href="/service-areas/kendallville">Kendallville</a></li>
+            <li><a href="/service-areas/auburn">Auburn</a></li>
+            <li><a href="/service-areas/angola">Angola</a></li>
+            <li><a href="/service-areas/columbia-city">Columbia City</a></li>
+            <li><a href="/service-areas/warsaw">Warsaw</a></li>
+            <li><a href="/service-areas/goshen">Goshen</a></li>
+            <li><a href="/service-areas/huntington">Huntington</a></li>
+            <li><a href="/service-areas/decatur">Decatur</a></li>
+            <li><a href="/service-areas/wolcottville">Wolcottville</a></li>
+          </ul>
+        </li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/reviews">Reviews</a></li>
+      </ul>
+    </nav>
+    <a href="tel:+12603431775" class="header-phone">(260) 343-1775</a>
+    <a href="/contact" class="header-cta">Free Quote</a>
+  </div>
+</header>
+
+<!-- ==================== PAGE HEADER ==================== -->
+<div class="page-header">
+  <div class="container">
+    <div class="breadcrumbs">
+      <a href="/">Home</a>
+      <span class="sep">/</span>
+      About
+    </div>
+    <h1 class="page-title">About Jake's Floor Care</h1>
+    <p class="page-subtitle">Family-owned. Locally operated. Doing floors the right way since 2016.</p>
+  </div>
+</div>
+
+<!-- ==================== ABOUT INTRO ==================== -->
+<section class="about-intro">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-photo reveal">
+        <span>Photo of Jake here</span>
+      </div>
+      <div class="about-text reveal">
+        <span class="section-tag">The Story</span>
+        <h2>Just a Guy Who<br>Cares About Floors</h2>
+        <p>
+          Jake Lazzarino started Jake's Floor Care in January 2016 with a truck, a carpet machine, and a
+          simple idea: show up on time, do the job right, and charge a fair price. No sales pitch. No
+          corporate runaround. Just honest work.
+        </p>
+        <p>
+          Ten years later, not much has changed. Jake still answers his own phone. He still shows up to
+          every job himself. And he still treats every customer's home like it's his own. That's the
+          whole secret — there isn't one. He just gives a damn.
+        </p>
+        <p>
+          What started as carpet cleaning grew into tile and grout work, upholstery cleaning, floor waxing,
+          and eventually a full epoxy and concrete coatings operation. Garages, basements, shop floors,
+          commercial spaces — if it's a floor, Jake's probably worked on one like it.
+        </p>
+        <p>
+          Jake's Floor Care is a sole proprietorship based out of <span class="highlight">Wolcottville, Indiana</span>,
+          serving the entire northeast Indiana region. It's a family business in the truest sense — no
+          franchise, no investors, no middlemen.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== WHY JAKE'S ==================== -->
+<section class="why-jakes">
+  <div class="container">
+    <div class="reveal">
+      <span class="section-tag">Why Jake's</span>
+      <h2 class="section-title">Reasons People<br>Keep Calling Back</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <div class="why-number">10+</div>
+        <h3>Years of Experience</h3>
+        <p>
+          In business since 2016. Jake's done thousands of jobs across NE Indiana — residential,
+          commercial, industrial. He knows what works and what doesn't.
+        </p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-number">A+</div>
+        <h3>BBB Rated</h3>
+        <p>
+          Better Business Bureau A+ rating. Not because of marketing — because customers don't
+          have complaints. That says more than any ad ever could.
+        </p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-number">&check;</div>
+        <h3>Angi Award Winner</h3>
+        <p>
+          Recognized by Angi (formerly Angie's List) for quality and customer satisfaction.
+          Real reviews from real homeowners who hired Jake and were glad they did.
+        </p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-number">$0</div>
+        <h3>Free Quotes, Always</h3>
+        <p>
+          Jake will come out, look at the job, and give you an honest number. No pressure,
+          no upsells, no hidden fees. The price he quotes is the price you pay.
+        </p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-number">1</div>
+        <h3>Owner-Operated</h3>
+        <p>
+          When you call Jake's Floor Care, you talk to Jake. When he shows up to your house,
+          that's the owner standing in your doorway. Accountability built in.
+        </p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-number">&hearts;</div>
+        <h3>Family Business Values</h3>
+        <p>
+          No corporate playbook here. Jake runs his business the way his family raised him —
+          be honest, work hard, and leave things better than you found them.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SERVICE AREA ==================== -->
+<section class="about-areas">
+  <div class="container">
+    <div class="areas-text reveal">
+      <span class="section-tag">Where We Work</span>
+      <h2 class="section-title">Serving All of<br>Northeast Indiana</h2>
+      <p>
+        Jake's Floor Care is based in Wolcottville and serves homes and businesses throughout
+        the NE Indiana region. From Fort Wayne to Angola, Goshen to Huntington — if you're in
+        the area, Jake can get to you.
+      </p>
+      <ul class="areas-list">
+        <li><a href="/service-areas/fort-wayne">Fort Wayne</a></li>
+        <li><a href="/service-areas/kendallville">Kendallville</a></li>
+        <li><a href="/service-areas/auburn">Auburn</a></li>
+        <li><a href="/service-areas/angola">Angola</a></li>
+        <li><a href="/service-areas/columbia-city">Columbia City</a></li>
+        <li><a href="/service-areas/warsaw">Warsaw</a></li>
+        <li><a href="/service-areas/goshen">Goshen</a></li>
+        <li><a href="/service-areas/huntington">Huntington</a></li>
+        <li><a href="/service-areas/decatur">Decatur</a></li>
+        <li><a href="/service-areas/wolcottville">Wolcottville</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CTA BAND ==================== -->
+<section class="cta-band">
+  <div class="container reveal">
+    <h2 class="cta-title">Ready to Talk Floors?</h2>
+    <p class="cta-sub">Free quotes, honest pricing, no pressure. That's how we've always done it.</p>
+    <a href="/contact" class="btn-white">Get a Free Quote</a>
+    <a href="tel:+12603431775" class="cta-phone">(260) 343-1775</a>
+  </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="logo"><img src="/images/logo-transparent.png" alt="Jake's Floor Care"></a>
+        <p>Carpet cleaning, epoxy coatings, and floor care across northeast Indiana. Family-owned since 2016.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="/services/carpet-cleaning">Carpet Cleaning</a></li>
+          <li><a href="/services/tile-and-grout-cleaning">Tile &amp; Grout Cleaning</a></li>
+          <li><a href="/services/tile-resurfacing">Tile Resurfacing</a></li>
+          <li><a href="/services/upholstery-cleaning">Upholstery Cleaning</a></li>
+          <li><a href="/services/floor-waxing">Floor Waxing</a></li>
+          <li><a href="/services/epoxy-flooring">Epoxy Flooring</a></li>
+          <li><a href="/services/concrete-coatings">Concrete Coatings</a></li>
+          <li><a href="/services/commercial-flooring">Commercial Flooring</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Service Areas</h4>
+        <ul>
+          <li><a href="/service-areas/fort-wayne">Fort Wayne</a></li>
+          <li><a href="/service-areas/kendallville">Kendallville</a></li>
+          <li><a href="/service-areas/auburn">Auburn</a></li>
+          <li><a href="/service-areas/angola">Angola</a></li>
+          <li><a href="/service-areas/columbia-city">Columbia City</a></li>
+          <li><a href="/service-areas/warsaw">Warsaw</a></li>
+          <li><a href="/service-areas/goshen">Goshen</a></li>
+          <li><a href="/service-areas/huntington">Huntington</a></li>
+          <li><a href="/service-areas/decatur">Decatur</a></li>
+          <li><a href="/service-areas/wolcottville">Wolcottville</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact-item"><strong>Phone</strong><a href="tel:+12603431775">(260) 343-1775</a></div>
+        <div class="footer-contact-item"><strong>Office</strong><span>11511 E 1150 N-57<br>Wolcottville, IN 46795</span></div>
+        <div class="footer-contact-item"><strong>Hours</strong><span>Mon–Sat: 7am – 7pm<br>Sunday: Closed</span></div>
+        <ul style="list-style:none;margin-top:20px;">
+          <li style="margin-bottom:6px;"><a href="/about" style="font-size:13px;color:var(--gray-400);text-decoration:none;">About</a></li>
+          <li style="margin-bottom:6px;"><a href="/reviews" style="font-size:13px;color:var(--gray-400);text-decoration:none;">Reviews</a></li>
+          <li><a href="/contact" style="font-size:13px;color:var(--gray-400);text-decoration:none;">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Jake's Floor Care. All rights reserved.</span>
+      <div><a href="/privacy">Privacy</a><a href="/sitemap">Sitemap</a></div>
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-sticky">
+  <div class="mobile-sticky-inner">
+    <a href="tel:+12603431775" class="sticky-call">Call Now</a>
+    <a href="/contact" class="sticky-quote">Free Quote</a>
+  </div>
+</div>
+
+<script src="/script.js"></script>
+</body>
+</html>
