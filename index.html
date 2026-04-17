@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jake's Floor Care — Carpet Cleaning, Epoxy & Concrete Coatings | NE Indiana</title>
+<meta name="description" content="Jake's Floor Care provides carpet cleaning, epoxy flooring, and concrete coatings across NE Indiana. BBB A+ rated, 10+ years experience. Call (260) 343-1775.">
+<link rel="canonical" href="https://jakesfloorcare.com/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --blue: #2a4592;
+  --blue-dark: #1d3268;
+  --blue-light: #3a5bb0;
+  --black: #0a0a0a;
+  --dark: #141414;
+  --gray-800: #2e2e2e;
+  --gray-600: #555;
+  --gray-400: #8a8a8a;
+  --gray-300: #b0b0b0;
+  --gray-200: #d5d5d5;
+  --gray-100: #eee;
+  --white: #fff;
+  --off-white: #f8f8f8;
+  --ff-heading: 'Sora', sans-serif;
+  --ff-body: 'Outfit', sans-serif;
+  --header-h: 70px;
+}
+
+html { scroll-behavior: smooth; overflow-x: hidden; }
+body {
+  font-family: var(--ff-body);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--dark);
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+button { font-family: inherit; cursor: pointer; border: none; }
+.container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+
+/* ===================== HEADER ===================== */
+.site-header {
+  position: fixed; top: 0; left: 0; right: 0;
+  height: var(--header-h);
+  background: var(--white);
+  z-index: 1000;
+  border-bottom: 1px solid var(--gray-200);
+  transition: box-shadow 0.3s;
+}
+.header-inner {
+  max-width: 1140px; margin: 0 auto; padding: 0 24px;
+  height: 100%; display: flex; align-items: center; justify-content: space-between;
+}
+.logo { text-decoration: none; display: flex; align-items: center; }
+.logo img { height: 50px; width: auto; }
+
+.main-nav { display: flex; align-items: center; gap: 0; list-style: none; }
+.main-nav > li { position: relative; }
+.main-nav > li > a,
+.main-nav > li > button {
+  font-family: var(--ff-body); font-weight: 500; font-size: 14px;
+  color: var(--gray-600); text-decoration: none; padding: 24px 14px;
+  display: flex; align-items: center; gap: 5px; background: none; transition: color 0.2s;
+}
+.main-nav > li > a:hover,
+.main-nav > li > button:hover { color: var(--blue); }
+
+.nav-arrow {
+  width: 7px; height: 7px;
+  border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor;
+  transform: rotate(45deg); margin-top: -3px; transition: transform 0.2s;
+}
+
+.dropdown {
+  position: absolute; top: 100%; left: 0;
+  background: var(--white); border: 1px solid var(--gray-200);
+  min-width: 220px; padding: 8px 0;
+  opacity: 0; visibility: hidden; transform: translateY(-4px);
+  transition: all 0.2s; list-style: none;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+.dropdown.wide { min-width: 440px; display: grid; grid-template-columns: 1fr 1fr; padding: 12px 0; }
+.dropdown-label {
+  font-family: var(--ff-body); font-weight: 600; font-size: 11px;
+  text-transform: uppercase; letter-spacing: 1.5px; color: var(--blue); padding: 8px 16px 4px;
+}
+.dropdown li a {
+  display: block; padding: 6px 16px;
+  font-family: var(--ff-body); font-weight: 400; font-size: 14px;
+  color: var(--gray-600); text-decoration: none; transition: all 0.15s;
+}
+.dropdown li a:hover { color: var(--blue); background: rgba(42,69,146,0.04); }
+.has-dropdown:hover .dropdown,
+.has-dropdown:focus-within .dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
+.has-dropdown:hover .nav-arrow { transform: rotate(-135deg); }
+
+.header-phone {
+  font-family: var(--ff-body); font-weight: 600; font-size: 14px;
+  color: var(--black); text-decoration: none; margin-left: 8px;
+}
+.header-cta {
+  margin-left: 16px; font-family: var(--ff-body); font-weight: 600;
+  font-size: 13px; letter-spacing: 0.5px; color: var(--white);
+  background: var(--blue); padding: 10px 22px; text-decoration: none;
+  transition: background 0.2s;
+}
+.header-cta:hover { background: var(--blue-dark); }
+
+.menu-toggle {
+  display: none; background: none; border: none;
+  width: 28px; height: 20px; position: relative;
+  flex-shrink: 0; margin-left: auto;
+}
+.menu-toggle span {
+  display: block; width: 100%; height: 2px; background: var(--black);
+  position: absolute; left: 0; transition: all 0.3s;
+}
+.menu-toggle span:nth-child(1) { top: 0; }
+.menu-toggle span:nth-child(2) { top: 9px; }
+.menu-toggle span:nth-child(3) { top: 18px; }
+
+/* ===================== HERO ===================== */
+.hero {
+  margin-top: var(--header-h);
+  height: calc(100vh - var(--header-h));
+  max-height: 800px;
+  min-height: 540px;
+  position: relative;
+  overflow: hidden;
+  background: var(--black);
+  clip: rect(0, auto, auto, 0);
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url('images/hero-metallic-epoxy.webp') center 40%/cover no-repeat;
+  transform: scale(1.05);
+  animation: heroZoom 20s ease-in-out infinite alternate;
+}
+
+@media (min-width: 769px) {
+  .hero-bg {
+    background-image: url('images/hero-epoxy-garage.webp');
+  }
+}
+
+@keyframes heroZoom {
+  0% { transform: scale(1.05); }
+  100% { transform: scale(1.12); }
+}
+
+.hero-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to right, rgba(10,10,10,0.92) 0%, rgba(10,10,10,0.6) 45%, transparent 75%),
+    linear-gradient(to top, rgba(10,10,10,0.7) 0%, transparent 40%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-desc {
+  padding-bottom: 28px;
+  margin-top: 16px;
+}
+
+.hero-title {
+  font-family: var(--ff-heading);
+  font-weight: 800;
+  font-size: clamp(38px, 5vw, 64px);
+  line-height: 1.05;
+  color: var(--white);
+  margin-bottom: 16px;
+  max-width: 620px;
+}
+
+.hero-desc {
+  font-family: var(--ff-body);
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--gray-400);
+  max-width: 600px;
+}
+
+.hero-actions { display: flex; gap: 12px; align-items: center; margin-top: 28px; }
+
+.btn-blue {
+  font-family: var(--ff-body); font-weight: 600; font-size: 14px;
+  color: var(--white); background: var(--blue); padding: 14px 28px;
+  text-decoration: none; transition: background 0.2s; display: inline-block;
+}
+.btn-blue:hover { background: var(--blue-dark); }
+
+.btn-ghost {
+  font-family: var(--ff-body); font-weight: 500; font-size: 14px;
+  color: var(--white); padding: 14px 28px; text-decoration: none;
+  border: 1px solid rgba(255,255,255,0.25); transition: all 0.2s; display: inline-block;
+}
+.btn-ghost:hover { border-color: var(--white); background: rgba(255,255,255,0.05); }
+
+/* Hero trust bar */
+.hero-trust {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: auto;
+}
+
+.hero-trust-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hero-trust-item + .hero-trust-item {
+  padding-left: 0;
+  border-left: none;
+}
+
+.trust-stars {
+  display: flex;
+  gap: 2px;
+}
+
+.trust-star {
+  color: #fbbc04;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.trust-google-icon {
+  width: 20px; height: 20px;
+}
+
+.trust-item-text {
+  font-family: var(--ff-body);
+  font-weight: 500;
+  font-size: 13px;
+  color: rgba(255,255,255,0.85);
+  line-height: 1.3;
+}
+
+.trust-item-text strong {
+  display: block;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.bbb-logo-hero {
+  height: 36px;
+  width: auto;
+}
+
+.trust-floors-num {
+  font-family: var(--ff-heading);
+  font-weight: 800;
+  font-size: 28px;
+  color: var(--white);
+  line-height: 1;
+}
+
+/* ===================== SECTIONS ===================== */
+section { padding: 100px 0; }
+.section-tag {
+  font-family: var(--ff-body); font-weight: 600; font-size: 12px;
+  text-transform: uppercase; letter-spacing: 2px; color: var(--blue); margin-bottom: 12px;
+}
+.section-title {
+  font-family: var(--ff-heading); font-weight: 700;
+  font-size: clamp(32px, 3.5vw, 48px); line-height: 1.05;
+  color: var(--black); margin-bottom: 16px;
+}
+.section-desc {
+  font-family: var(--ff-body); font-size: 16px;
+  color: var(--gray-600); max-width: 480px; line-height: 1.65;
+}
+
+/* ===================== SERVICES ===================== */
+.services {
+  background: var(--dark);
+  padding: 100px 0 80px;
+  overflow: hidden;
+}
+
+.services-header {
+  margin-bottom: 48px;
+}
+
+.services .section-tag { color: var(--gray-400); }
+.services .section-title { color: var(--white); }
+.services .section-desc { color: var(--gray-400); }
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+}
+
+.services-grid.coatings-grid .svc-card {
+  min-height: 340px;
+}
+
+.services-grid.cleaning-grid {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+}
+
+.services-grid.cleaning-grid .svc-card {
+  min-height: 200px;
+}
+
+.services-grid.cleaning-grid .svc-card:nth-child(n+3) {
+  min-height: 340px;
+}
+
+/* Switch cleaning grid to 3-col for bottom row */
+.services-grid.cleaning-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.services-grid.cleaning-grid .svc-card:nth-child(1) { grid-column: span 3; }
+.services-grid.cleaning-grid .svc-card:nth-child(2) { grid-column: span 3; }
+.services-grid.cleaning-grid .svc-card:nth-child(3) { grid-column: span 2; }
+.services-grid.cleaning-grid .svc-card:nth-child(4) { grid-column: span 2; }
+.services-grid.cleaning-grid .svc-card:nth-child(5) { grid-column: span 2; }
+
+.svc-card {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  text-decoration: none;
+  min-height: 220px;
+}
+
+.svc-card-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.5s ease;
+}
+
+.svc-card:hover .svc-card-bg { transform: scale(1.06); }
+
+.svc-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.05) 100%);
+  transition: background 0.3s;
+}
+
+.svc-card:hover::after {
+  background: linear-gradient(to top, rgba(42,69,146,0.9) 0%, rgba(42,69,146,0.15) 50%, rgba(0,0,0,0.05) 100%);
+}
+
+.svc-card-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 24px;
+}
+
+.svc-card-name {
+  font-family: var(--ff-heading);
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--white);
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+
+.svc-card-brief {
+  font-family: var(--ff-body);
+  font-weight: 300;
+  font-size: 13px;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.4;
+}
+
+.svc-card-arrow {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 2;
+  width: 32px; height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.1);
+  color: var(--white);
+  font-size: 14px;
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.services-view-all {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.services-view-all a {
+  font-family: var(--ff-body); font-weight: 500; font-size: 14px;
+  color: var(--gray-400); text-decoration: none;
+  border-bottom: 1px solid var(--gray-600);
+  padding-bottom: 2px;
+  transition: all 0.2s;
+}
+
+.services-view-all a:hover { color: var(--white); border-color: var(--white); }
+
+/* ===================== TRUST ===================== */
+.trust {
+  background: var(--white);
+  position: relative;
+  padding-top: 0;
+}
+
+/* Overlap band — pulls up into the dark services section */
+.trust-overlap {
+  background: var(--white);
+  margin-top: -48px;
+  position: relative;
+  z-index: 5;
+  padding: 48px 0 0;
+}
+
+.trust-overlap .container {
+  border-bottom: 1px solid var(--gray-200);
+  padding-bottom: 56px;
+}
+
+/* Team strip */
+.trust-team {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 48px;
+}
+
+.trust-team-img {
+  width: 340px;
+  height: 260px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.trust-team-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.trust-team-text h2 {
+  font-family: var(--ff-heading);
+  font-weight: 700;
+  font-size: clamp(28px, 3vw, 40px);
+  line-height: 1.1;
+  color: var(--black);
+  margin-bottom: 12px;
+}
+
+.trust-team-text p {
+  font-family: var(--ff-body);
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--gray-600);
+  max-width: 440px;
+}
+
+/* Testimonials — horizontal scroll on one line */
+.testimonials {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 8px;
+  scrollbar-width: none;
+}
+
+.testimonials::-webkit-scrollbar { display: none; }
+
+.testimonial {
+  flex: 0 0 340px;
+  scroll-snap-align: start;
+  background: var(--off-white);
+  padding: 32px;
+  position: relative;
+}
+
+.testimonial::before {
+  content: '\201C';
+  font-family: Georgia, serif;
+  font-size: 48px;
+  color: var(--blue);
+  line-height: 1;
+  position: absolute;
+  top: 20px;
+  left: 24px;
+  opacity: 0.3;
+}
+
+.testimonial-text {
+  font-family: var(--ff-body);
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--gray-600);
+  margin-bottom: 16px;
+  padding-top: 12px;
+}
+
+.testimonial-author {
+  font-family: var(--ff-body);
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--black);
+}
+
+/* ===================== AREAS ===================== */
+.areas { background: var(--off-white); }
+
+.areas-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.areas-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid var(--gray-200);
+  background: var(--white);
+}
+
+.areas-list li { border-bottom: 1px solid var(--gray-200); }
+.areas-list li:nth-child(odd) { border-right: 1px solid var(--gray-200); }
+.areas-list li:nth-last-child(-n+2) { border-bottom: none; }
+
+.areas-list a {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 14px 16px; text-decoration: none;
+  font-family: var(--ff-body); font-weight: 500; font-size: 14px;
+  color: var(--dark); transition: all 0.15s;
+}
+.areas-list a:hover { background: var(--blue); color: var(--white); }
+.areas-arrow { font-size: 12px; color: var(--gray-300); }
+.areas-list a:hover .areas-arrow { color: var(--white); }
+
+/* ===================== CTA ===================== */
+.cta-band { background: var(--blue); padding: 72px 0; text-align: center; }
+
+.cta-title {
+  font-family: var(--ff-heading); font-weight: 700;
+  font-size: clamp(32px, 3.5vw, 48px); color: var(--white);
+  line-height: 1.05; margin-bottom: 12px;
+}
+.cta-sub {
+  font-family: var(--ff-body); font-weight: 300; font-size: 17px;
+  color: rgba(255,255,255,0.75); margin-bottom: 32px;
+}
+.btn-white {
+  font-family: var(--ff-body); font-weight: 600; font-size: 14px;
+  color: var(--blue); background: var(--white); padding: 14px 32px;
+  text-decoration: none; transition: all 0.2s; display: inline-block; margin-right: 12px;
+}
+.btn-white:hover { background: var(--gray-100); }
+.cta-phone {
+  font-family: var(--ff-body); font-weight: 500; font-size: 14px;
+  color: var(--white); text-decoration: none; padding: 14px 20px;
+  border: 1px solid rgba(255,255,255,0.35); display: inline-block;
+  transition: border-color 0.2s;
+}
+.cta-phone:hover { border-color: var(--white); }
+
+/* ===================== FOOTER ===================== */
+.site-footer { background: var(--black); color: var(--gray-400); padding: 56px 0 0; }
+
+.footer-grid {
+  display: grid; grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+  gap: 32px; padding-bottom: 40px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.footer-brand .logo { margin-bottom: 16px; }
+.footer-brand .logo img { height: 60px; }
+.footer-brand p { font-size: 14px; line-height: 1.6; color: var(--gray-400); max-width: 260px; }
+
+.footer-col h4 {
+  font-family: var(--ff-body); font-weight: 600; font-size: 12px;
+  text-transform: uppercase; letter-spacing: 1.5px; color: var(--white); margin-bottom: 16px;
+}
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 6px; }
+.footer-col a { font-size: 13px; color: var(--gray-400); text-decoration: none; transition: color 0.2s; }
+.footer-col a:hover { color: var(--white); }
+
+.footer-contact-item { display: flex; gap: 8px; margin-bottom: 10px; font-size: 13px; line-height: 1.5; }
+.footer-contact-item strong { color: var(--gray-200); font-weight: 600; min-width: 52px; }
+
+.footer-bottom {
+  padding: 20px 0; display: flex; justify-content: space-between;
+  align-items: center; font-size: 12px; color: var(--gray-600);
+}
+.footer-bottom a { color: var(--gray-400); text-decoration: none; margin-left: 16px; }
+.footer-bottom a:hover { color: var(--white); }
+
+/* ===================== MOBILE STICKY ===================== */
+.mobile-sticky {
+  display: none; position: fixed; bottom: 0; left: 0; right: 0;
+  z-index: 999; background: var(--black); border-top: 1px solid rgba(255,255,255,0.1);
+}
+.mobile-sticky-inner { display: flex; }
+.mobile-sticky a {
+  flex: 1; text-align: center; padding: 14px 8px;
+  font-family: var(--ff-body); font-weight: 600; font-size: 13px; text-decoration: none;
+}
+.mobile-sticky .sticky-call { color: var(--white); background: var(--black); }
+.mobile-sticky .sticky-quote { color: var(--white); background: var(--blue); }
+
+/* ===================== REVEAL ===================== */
+.reveal {
+  opacity: 0; transform: translateY(16px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 1024px) {
+  .services-grid.coatings-grid { grid-template-columns: repeat(3, 1fr); }
+  .services-grid.cleaning-grid { grid-template-columns: repeat(6, 1fr); }
+  .services-grid.cleaning-grid .svc-card:nth-child(1) { grid-column: span 3; }
+  .services-grid.cleaning-grid .svc-card:nth-child(2) { grid-column: span 3; }
+  .services-grid.cleaning-grid .svc-card:nth-child(3) { grid-column: span 2; }
+  .services-grid.cleaning-grid .svc-card:nth-child(4) { grid-column: span 2; }
+  .services-grid.cleaning-grid .svc-card:nth-child(5) { grid-column: span 2; }
+  .trust-team { flex-direction: column; gap: 24px; text-align: center; }
+  .trust-team-img { width: 100%; max-width: 400px; height: 240px; }
+  .trust-team-text p { max-width: 100%; }
+  .testimonial { flex: 0 0 280px; padding: 24px; }
+  .areas-layout { grid-template-columns: 1fr; gap: 40px; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 768px) {
+  :root { --header-h: 56px; }
+  .header-inner { position: relative; }
+  .menu-toggle { display: block; position: absolute; right: 24px; top: 50%; transform: translateY(-50%); z-index: 10; }
+  .main-nav {
+    position: fixed; top: var(--header-h); left: 0; right: 0; bottom: 0;
+    background: var(--white); flex-direction: column; padding: 16px 24px;
+    gap: 0; overflow-y: auto; transform: translateX(100%);
+    transition: transform 0.3s; border-top: 1px solid var(--gray-200);
+  }
+  .main-nav.open { transform: translateX(0); }
+  .main-nav > li > a,
+  .main-nav > li > button {
+    padding: 14px 0; font-size: 15px; width: 100%; justify-content: space-between;
+    border-bottom: 1px solid var(--gray-100); color: var(--dark);
+  }
+  .dropdown, .dropdown.wide {
+    position: static; opacity: 1; visibility: visible; transform: none;
+    border: none; box-shadow: none; padding: 0 0 8px 12px; display: none;
+    min-width: 0; max-width: 100%; grid-template-columns: 1fr;
+  }
+  .dropdown.mobile-open, .dropdown.wide.mobile-open { display: block; }
+  .dropdown-label { padding: 8px 0 4px; }
+  .logo img { height: 44px; }
+  .header-phone, .header-cta { display: none; }
+  .mobile-sticky { display: block; }
+  body { padding-bottom: 52px; }
+
+  .hero { height: calc(100vh - 56px); max-height: none; }
+  .hero-title { font-size: 36px; max-width: 100%; }
+  .hero-desc { max-width: 100%; }
+  .hero-actions { flex-direction: column; align-items: flex-start; }
+  .hero-trust { flex-wrap: wrap; gap: 20px; }
+  .hero-trust-item + .hero-trust-item { padding-left: 0; border-left: none; }
+
+  .services-grid.coatings-grid,
+  .services-grid.cleaning-grid { grid-template-columns: 1fr; }
+  .services-grid.coatings-grid .svc-card,
+  .services-grid.cleaning-grid .svc-card { min-height: 0; aspect-ratio: 1/1; grid-column: span 1; }
+
+
+  .areas-list { grid-template-columns: 1fr; }
+  .areas-list li:nth-child(odd) { border-right: none; }
+  .areas-list li:last-child { border-bottom: none; }
+
+  section { padding: 64px 0; }
+  .section-title { font-size: 28px; }
+  .footer-grid { grid-template-columns: 1fr; gap: 24px; }
+  .footer-bottom { flex-direction: column; gap: 6px; text-align: center; }
+  .footer-bottom a { margin: 0 8px; }
+}
+
+@media (max-width: 480px) {
+  .hero-trust { gap: 16px; }
+  .bbb-logo-hero { height: 28px; }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="logo"><img src="images/logo-transparent.png" alt="Jake's Floor Care" width="50" height="50"></a>
+    <button class="menu-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <nav>
+      <ul class="main-nav" id="mainNav">
+        <li class="has-dropdown">
+          <button type="button">Services <span class="nav-arrow"></span></button>
+          <ul class="dropdown wide">
+            <li class="dropdown-label">Cleaning &amp; Maintenance</li>
+            <li class="dropdown-label">Coatings &amp; Epoxy</li>
+            <li><a href="/services/carpet-cleaning">Carpet Cleaning</a></li>
+            <li><a href="/services/epoxy-flooring">Epoxy Flooring</a></li>
+            <li><a href="/services/tile-and-grout-cleaning">Tile &amp; Grout Cleaning</a></li>
+            <li><a href="/services/metallic-and-marble-epoxy">Metallic &amp; Marble Epoxy</a></li>
+            <li><a href="/services/tile-resurfacing">Tile Resurfacing</a></li>
+            <li><a href="/services/concrete-coatings">Concrete Coatings</a></li>
+            <li><a href="/services/upholstery-cleaning">Upholstery Cleaning</a></li>
+            <li><a href="/services/decorative-concrete">Decorative Concrete</a></li>
+            <li><a href="/services/floor-waxing">Floor Waxing</a></li>
+            <li><a href="/services/commercial-flooring">Commercial Flooring</a></li>
+            <li><a href="/services/industrial-flooring">Industrial Flooring</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown">
+          <button type="button">Service Areas <span class="nav-arrow"></span></button>
+          <ul class="dropdown">
+            <li><a href="/service-areas/fort-wayne">Fort Wayne</a></li>
+            <li><a href="/service-areas/kendallville">Kendallville</a></li>
+            <li><a href="/service-areas/auburn">Auburn</a></li>
+            <li><a href="/service-areas/angola">Angola</a></li>
+            <li><a href="/service-areas/columbia-city">Columbia City</a></li>
+            <li><a href="/service-areas/warsaw">Warsaw</a></li>
+            <li><a href="/service-areas/goshen">Goshen</a></li>
+            <li><a href="/service-areas/huntington">Huntington</a></li>
+            <li><a href="/service-areas/decatur">Decatur</a></li>
+            <li><a href="/service-areas/wolcottville">Wolcottville</a></li>
+          </ul>
+        </li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/reviews">Reviews</a></li>
+      </ul>
+    </nav>
+    <a href="tel:+12603431775" class="header-phone">(260) 343-1775</a>
+    <a href="/contact" class="header-cta">Free Quote</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <h1 class="hero-title">Carpet Cleaning &amp; Epoxy Flooring in Northeast Indiana</h1>
+    <div class="hero-actions">
+      <a href="/contact" class="btn-blue">Get a Free Quote</a>
+      <a href="tel:+12603431775" class="btn-ghost">(260) 343-1775</a>
+    </div>
+    <div class="hero-trust">
+      <div class="hero-trust-item">
+        <img src="images/bbb-logo.svg" alt="BBB A+ Rating" class="bbb-logo-hero">
+      </div>
+      <div class="hero-trust-item">
+        <img src="images/google-icon.svg" alt="Google" class="trust-google-icon">
+        <div>
+          <div class="trust-stars">
+            <span class="trust-star">&#9733;</span>
+            <span class="trust-star">&#9733;</span>
+            <span class="trust-star">&#9733;</span>
+            <span class="trust-star">&#9733;</span>
+            <span class="trust-star">&#9733;</span>
+          </div>
+          <div class="trust-item-text">5-Star Rated on Google</div>
+        </div>
+      </div>
+      <div class="hero-trust-item">
+        <div class="trust-floors-num">500+</div>
+        <div class="trust-item-text">Floors Completed</div>
+      </div>
+    </div>
+    <p class="hero-desc">
+      From deep carpet extraction to showroom-finish epoxy — we've been
+      taking care of floors across Fort Wayne, Kendallville, and NE Indiana
+      for over 10 years.
+    </p>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="services-header reveal">
+      <p class="section-tag">Our Services</p>
+      <h2 class="section-title">Coatings &amp; Epoxy</h2>
+    </div>
+
+    <div class="services-grid coatings-grid">
+      <a href="/services/metallic-and-marble-epoxy" class="svc-card reveal">
+        <div class="svc-card-bg" style="background-image:url('images/tile-metallic-epoxy.webp')"></div>
+        <span class="svc-card-arrow">&#8594;</span>
+        <div class="svc-card-content">
+          <div class="svc-card-name">Metallic &amp; Marble Epoxy</div>
+          <div class="svc-card-brief">Custom decorative finishes</div>
+        </div>
+      </a>
+
+      <a href="/services/epoxy-flooring" class="svc-card reveal">
+        <div class="svc-card-bg" style="background-image:url('images/tile-epoxy-flooring.webp')"></div>
+        <span class="svc-card-arrow">&#8594;</span>
+        <div class="svc-card-content">
+          <div class="svc-card-name">Epoxy Flooring</div>
+          <div class="svc-card-brief">Seamless, durable floor systems</div>
+        </div>
+      </a>
+
+      <a href="/services/industrial-flooring" class="svc-card reveal">
+        <div class="svc-card-bg" style="background-image:url('images/tile-industrial-flooring.webp')"></div>
+        <span class="svc-card-arrow">&#8594;</span>
+        <div class="svc-card-content">
+          <div class="svc-card-name">Industrial Flooring</div>
+          <div class="svc-card-brief">Warehouses, plants, heavy-duty</div>
+        </div>
+      </a>
+
+      <a href="/services/commercial-flooring" class="svc-card reveal">
+        <div class="svc-card-bg" style="background-image:url('images/tile-commercial-flooring.webp')"></div>
+        <span class="svc-card-arrow">&#8594;</span>
+        <div class="svc-card-content">
+          <div class="svc-card-name">Commercial Flooring</div>
+          <div class="svc-card-brief">Built for high-traffic spaces</div>
+        </div>
+      </a>
+
+      <a href="/services/decorative-concrete" class="svc-card reveal">
+        <div class="svc-card-bg" style="background-image:url('images/tile-decorative-concrete.webp')"></div>
+        <span class="svc-card-arrow">&#8594;</span>
+        <div class="svc-card-content">
+          <div class="svc-card-name">Decorative Concrete</div>
+          <div class="svc-card-brief">Staining, stamping, overlays</div>
+        </div>
+      </a>
+
+      <a href="/services/concrete-coatings" class="svc-card reveal">
+        <div class="svc-card-bg" style="background-image:url('images/tile-concrete-coatings.webp')"></div>
+        <span class="svc-card-arrow">&#8594;</span>
+        <div class="svc-card-content">
+          <div class="svc-card-name">Concrete Coatings</div>
+          <div class="svc-card-brief">Protect and finish concrete</div>
+        </div>
+      </a>
+    </div>
+
+    <div class="services-header reveal" style="margin-top:64px;">
+      <h2 class="section-title">Cleaning &amp; Maintenance</h2>
+    </div>
+
+    <div class="services-grid cleaning-grid">
+      <a href="/services/tile-resurfacing" class="svc-card reveal">
+        <div class="svc-card-bg" style="background-image:url('images/tile-tile-resurfacing.webp')"></div>
+        <span class="svc-card-arrow">&#8594;</span>
+        <div class="svc-card-content">
+          <div class="svc-card-name">Tile Resurfacing</div>
+          <div class="svc-card-brief">Refinish without ripping it out</div>
+        </div>
+      </a>
+
+      <a href="/services/tile-and-grout-cleaning" class="svc-card reveal">
+        <div class="svc-card-bg" style="background-image:url('images/tile-tile-grout.webp')"></div>
+        <span class="svc-card-arrow">&#8594;</span>
+        <div class="svc-card-content">
+          <div class="svc-card-name">Tile &amp; Grout Cleaning</div>
+          <div class="svc-card-brief">Bring tile back to life</div>
+        </div>
+      </a>
+
+      <a href="/services/carpet-cleaning" class="svc-card reveal">
+        <div class="svc-card-bg" style="background-image:url('images/tile-carpet-cleaning.webp')"></div>
+        <span class="svc-card-arrow">&#8594;</span>
+        <div class="svc-card-content">
+          <div class="svc-card-name">Carpet Cleaning</div>
+          <div class="svc-card-brief">Deep cleaning for homes and offices</div>
+        </div>
+      </a>
+
+      <a href="/services/floor-waxing" class="svc-card reveal">
+        <div class="svc-card-bg" style="background-image:url('images/tile-floor-waxing.webp')"></div>
+        <span class="svc-card-arrow">&#8594;</span>
+        <div class="svc-card-content">
+          <div class="svc-card-name">Floor Waxing</div>
+          <div class="svc-card-brief">Strip, seal, and shine</div>
+        </div>
+      </a>
+
+      <a href="/services/upholstery-cleaning" class="svc-card reveal">
+        <div class="svc-card-bg" style="background-image:url('images/tile-upholstery.webp')"></div>
+        <span class="svc-card-arrow">&#8594;</span>
+        <div class="svc-card-content">
+          <div class="svc-card-name">Upholstery Cleaning</div>
+          <div class="svc-card-brief">Couches, chairs, fabric care</div>
+        </div>
+      </a>
+    </div>
+
+    <div class="services-view-all reveal">
+      <a href="/services">View all services &#8594;</a>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST -->
+<section class="trust" id="trust">
+  <div class="trust-overlap">
+    <div class="container">
+      <div class="trust-team reveal">
+        <div class="trust-team-img">
+          <img src="images/team-jakes-crew.webp" alt="Jake Lazzarino and the Jake's Floor Care team in Wolcottville, Indiana" width="300" height="200" loading="lazy">
+        </div>
+        <div class="trust-team-text">
+          <h2>10 years of showing up and getting it done.</h2>
+          <p>
+            Jake started this company in 2016 with a van and a carpet wand.
+            A decade later, we're still the same crew — still local, still
+            answering the phone, still doing every job like it's our own house.
+            No sales team, no corporate runaround. You call, Jake shows up.
+          </p>
+        </div>
+      </div>
+
+      <div class="testimonials">
+        <div class="testimonial reveal">
+          <p class="testimonial-text">"We've used Jake's for several years now. Friendly, punctual, professional — they do good work every time."</p>
+          <span class="testimonial-author">Repeat customer</span>
+        </div>
+        <div class="testimonial reveal">
+          <p class="testimonial-text">"The concrete coating they put down looked like a showroom floor. Jake was great about answering all my questions."</p>
+          <span class="testimonial-author">Epoxy customer</span>
+        </div>
+        <div class="testimonial reveal">
+          <p class="testimonial-text">"On a scale of one to ten, I'd give Jake a twelve. Most personable guy I've dealt with in 76 years."</p>
+          <span class="testimonial-author">Verified customer</span>
+        </div>
+        <div class="testimonial reveal">
+          <p class="testimonial-text">"Prompt and thorough. Great follow up. Would recommend to anyone needing floor work done."</p>
+          <span class="testimonial-author">Fort Wayne customer</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AREAS -->
+<section class="areas" id="areas">
+  <div class="container">
+    <div class="areas-layout">
+      <div class="reveal">
+        <p class="section-tag">Coverage</p>
+        <h2 class="section-title">Based in Wolcottville.<br>We drive to you.</h2>
+        <p class="section-desc" style="margin-bottom: 24px;">
+          Most of our work is within an hour of home base. Fort Wayne,
+          Kendallville, Auburn, and everywhere in between.
+        </p>
+        <a href="tel:+12603431775" class="btn-blue">(260) 343-1775</a>
+      </div>
+      <ul class="areas-list reveal">
+        <li><a href="/service-areas/fort-wayne">Fort Wayne <span class="areas-arrow">&#8594;</span></a></li>
+        <li><a href="/service-areas/kendallville">Kendallville <span class="areas-arrow">&#8594;</span></a></li>
+        <li><a href="/service-areas/auburn">Auburn <span class="areas-arrow">&#8594;</span></a></li>
+        <li><a href="/service-areas/angola">Angola <span class="areas-arrow">&#8594;</span></a></li>
+        <li><a href="/service-areas/columbia-city">Columbia City <span class="areas-arrow">&#8594;</span></a></li>
+        <li><a href="/service-areas/warsaw">Warsaw <span class="areas-arrow">&#8594;</span></a></li>
+        <li><a href="/service-areas/goshen">Goshen <span class="areas-arrow">&#8594;</span></a></li>
+        <li><a href="/service-areas/huntington">Huntington <span class="areas-arrow">&#8594;</span></a></li>
+        <li><a href="/service-areas/decatur">Decatur <span class="areas-arrow">&#8594;</span></a></li>
+        <li><a href="/service-areas/wolcottville">Wolcottville <span class="areas-arrow">&#8594;</span></a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-band">
+  <div class="container reveal">
+    <h2 class="cta-title">Need a quote? Just call.</h2>
+    <p class="cta-sub">Free estimates, no pressure. We'll come take a look and give you an honest price.</p>
+    <a href="/contact" class="btn-white">Get a Free Quote</a>
+    <a href="tel:+12603431775" class="cta-phone">(260) 343-1775</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="logo"><img src="images/logo-transparent.png" alt="Jake's Floor Care"></a>
+        <p>Carpet cleaning, epoxy coatings, and floor care across northeast Indiana. Family-owned since 2016.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="/services/carpet-cleaning">Carpet Cleaning</a></li>
+          <li><a href="/services/tile-and-grout-cleaning">Tile &amp; Grout Cleaning</a></li>
+          <li><a href="/services/tile-resurfacing">Tile Resurfacing</a></li>
+          <li><a href="/services/upholstery-cleaning">Upholstery Cleaning</a></li>
+          <li><a href="/services/floor-waxing">Floor Waxing</a></li>
+          <li><a href="/services/epoxy-flooring">Epoxy Flooring</a></li>
+          <li><a href="/services/concrete-coatings">Concrete Coatings</a></li>
+          <li><a href="/services/commercial-flooring">Commercial Flooring</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Service Areas</h4>
+        <ul>
+          <li><a href="/service-areas/fort-wayne">Fort Wayne</a></li>
+          <li><a href="/service-areas/kendallville">Kendallville</a></li>
+          <li><a href="/service-areas/auburn">Auburn</a></li>
+          <li><a href="/service-areas/angola">Angola</a></li>
+          <li><a href="/service-areas/columbia-city">Columbia City</a></li>
+          <li><a href="/service-areas/warsaw">Warsaw</a></li>
+          <li><a href="/service-areas/goshen">Goshen</a></li>
+          <li><a href="/service-areas/huntington">Huntington</a></li>
+          <li><a href="/service-areas/decatur">Decatur</a></li>
+          <li><a href="/service-areas/wolcottville">Wolcottville</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact-item"><strong>Phone</strong><a href="tel:+12603431775">(260) 343-1775</a></div>
+        <div class="footer-contact-item"><strong>Office</strong><span>11511 E 1150 N-57<br>Wolcottville, IN 46795</span></div>
+        <div class="footer-contact-item"><strong>Hours</strong><span>Mon–Sat: 7am – 7pm<br>Sunday: Closed</span></div>
+        <ul style="list-style:none;margin-top:20px;">
+          <li style="margin-bottom:6px;"><a href="/about" style="font-size:13px;color:var(--gray-400);text-decoration:none;">About</a></li>
+          <li style="margin-bottom:6px;"><a href="/reviews" style="font-size:13px;color:var(--gray-400);text-decoration:none;">Reviews</a></li>
+          <li><a href="/contact" style="font-size:13px;color:var(--gray-400);text-decoration:none;">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Jake's Floor Care. All rights reserved.</span>
+      <div><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/sitemap">Sitemap</a></div>
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-sticky">
+  <div class="mobile-sticky-inner">
+    <a href="tel:+12603431775" class="sticky-call">Call Now</a>
+    <a href="/contact" class="sticky-quote">Free Quote</a>
+  </div>
+</div>
+
+<script>
+const toggle=document.querySelector('.menu-toggle'),nav=document.getElementById('mainNav');
+toggle.addEventListener('click',()=>{
+  nav.classList.toggle('open');
+  const s=toggle.querySelectorAll('span');
+  if(nav.classList.contains('open')){s[0].style.cssText='transform:rotate(45deg);top:9px';s[1].style.opacity='0';s[2].style.cssText='transform:rotate(-45deg);top:9px';}
+  else{s[0].style.cssText='';s[1].style.cssText='';s[2].style.cssText='';}
+});
+document.querySelectorAll('.has-dropdown > button').forEach(b=>{
+  b.addEventListener('click',()=>{if(innerWidth<=768){const d=b.nextElementSibling;d.classList.toggle('mobile-open');b.querySelector('.nav-arrow').style.transform=d.classList.contains('mobile-open')?'rotate(-135deg)':'rotate(45deg)';}});
+});
+const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible');});},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+addEventListener('scroll',()=>{document.querySelector('.site-header').style.boxShadow=scrollY>50?'0 1px 12px rgba(0,0,0,0.06)':'none';},{passive:true});
+</script>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LocalBusiness","name":"Jake's Floor Care","url":"https://jakesfloorcare.com","telephone":"+1-260-343-1775","address":{"@type":"PostalAddress","streetAddress":"11511 E 1150 N-57","addressLocality":"Wolcottville","addressRegion":"IN","postalCode":"46795","addressCountry":"US"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"07:00","closes":"19:00"}],"sameAs":["https://www.facebook.com/jakesfloorcare1/","https://www.bbb.org/us/in/wolcottville/profile/carpet-and-rug-cleaners/jakes-floor-care-0352-90118819"],"priceRange":"$$","areaServed":[{"@type":"City","name":"Fort Wayne","addressRegion":"IN"},{"@type":"City","name":"Kendallville","addressRegion":"IN"},{"@type":"City","name":"Auburn","addressRegion":"IN"},{"@type":"City","name":"Angola","addressRegion":"IN"},{"@type":"City","name":"Columbia City","addressRegion":"IN"},{"@type":"City","name":"Warsaw","addressRegion":"IN"},{"@type":"City","name":"Goshen","addressRegion":"IN"},{"@type":"City","name":"Huntington","addressRegion":"IN"},{"@type":"City","name":"Decatur","addressRegion":"IN"},{"@type":"City","name":"Wolcottville","addressRegion":"IN"}]}
+</script>
+<script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="69e2916406d5d58c2c9d31e2"></script>
+</body>
+</html>
