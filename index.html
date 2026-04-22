@@ -131,32 +131,16 @@ button { font-family: inherit; cursor: pointer; border: none; }
 /* ===================== HERO ===================== */
 .hero {
   margin-top: var(--header-h);
-  height: calc(100vh - var(--header-h));
-  max-height: 800px;
-  min-height: 540px;
   position: relative;
-  overflow: hidden;
-  background: var(--black);
-  clip: rect(0, auto, auto, 0);
+  overflow: visible;
+  background: var(--dark);
+  padding: 80px 0 120px;
 }
 
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: url('images/hero-metallic-epoxy.webp') center 40%/cover no-repeat;
-  transform: scale(1.05);
-  animation: heroZoom 20s ease-in-out infinite alternate;
-}
-
-@media (min-width: 769px) {
-  .hero-bg {
-    background-image: url('images/hero-epoxy-garage.webp');
-  }
-}
-
-@keyframes heroZoom {
-  0% { transform: scale(1.05); }
-  100% { transform: scale(1.12); }
+  background: url('images/svc-metallic-epoxy-blue.webp') center/cover no-repeat;
 }
 
 .hero-bg::after {
@@ -164,47 +148,152 @@ button { font-family: inherit; cursor: pointer; border: none; }
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(to right, rgba(10,10,10,0.92) 0%, rgba(10,10,10,0.6) 45%, transparent 75%),
-    linear-gradient(to top, rgba(10,10,10,0.7) 0%, transparent 40%);
+    linear-gradient(to right, rgba(10,10,10,0.93) 0%, rgba(10,10,10,0.75) 45%, rgba(10,10,10,0.5) 100%),
+    linear-gradient(to top, rgba(10,10,10,0.6) 0%, transparent 50%);
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 1140px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 60px;
+  align-items: start;
 }
 
 .hero-content {
-  position: relative;
-  z-index: 2;
-  height: 100%;
-  max-width: 1140px;
-  margin: 0 auto;
-  padding: 0 24px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-top: 20px;
 }
 
-.hero-desc {
-  padding-bottom: 28px;
-  margin-top: 16px;
+.hero-tag {
+  font-family: var(--ff-body);
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  color: var(--blue-light);
+  margin-bottom: 20px;
 }
 
 .hero-title {
   font-family: var(--ff-heading);
   font-weight: 800;
-  font-size: clamp(38px, 5vw, 64px);
-  line-height: 1.05;
+  font-size: clamp(34px, 4.5vw, 52px);
+  line-height: 1.1;
   color: var(--white);
-  margin-bottom: 16px;
-  max-width: 620px;
+  margin-bottom: 20px;
 }
 
 .hero-desc {
   font-family: var(--ff-body);
   font-weight: 300;
-  font-size: 15px;
-  line-height: 1.6;
-  color: var(--gray-400);
-  max-width: 600px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--gray-300);
 }
 
 .hero-actions { display: flex; gap: 12px; align-items: center; margin-top: 28px; }
+
+/* Hero form card */
+.hero-form-card {
+  background: var(--white);
+  padding: 36px 32px;
+  box-shadow: 0 16px 48px rgba(0,0,0,0.25);
+  margin-bottom: -80px;
+  position: relative;
+  z-index: 3;
+}
+
+.hero-form-card h2 {
+  font-family: var(--ff-heading);
+  font-weight: 700;
+  font-size: 22px;
+  color: var(--black);
+  margin-bottom: 6px;
+}
+
+.hero-form-card .form-sub {
+  font-family: var(--ff-body);
+  font-size: 14px;
+  color: var(--gray-600);
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+.hero-form-card label {
+  display: block;
+  font-family: var(--ff-heading);
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--dark);
+  margin-bottom: 6px;
+}
+
+.hero-form-card input,
+.hero-form-card select,
+.hero-form-card textarea {
+  width: 100%;
+  font-family: var(--ff-body);
+  font-size: 15px;
+  color: var(--dark);
+  background: var(--off-white);
+  border: 1px solid var(--gray-200);
+  padding: 13px 14px;
+  margin-bottom: 16px;
+  border-radius: 0;
+  -webkit-appearance: none;
+  appearance: none;
+  transition: border-color 0.2s;
+}
+
+.hero-form-card input:focus,
+.hero-form-card select:focus,
+.hero-form-card textarea:focus {
+  outline: none;
+  border-color: var(--blue);
+}
+
+.hero-form-card select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236b6560' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 36px;
+  cursor: pointer;
+}
+
+.hero-form-card textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.hero-form-submit {
+  width: 100%;
+  font-family: var(--ff-heading);
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--white);
+  background: var(--blue);
+  border: none;
+  padding: 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 4px;
+}
+
+.hero-form-submit:hover {
+  background: var(--blue-dark);
+}
 
 .btn-blue {
   font-family: var(--ff-body); font-weight: 600; font-size: 14px;
@@ -220,13 +309,11 @@ button { font-family: inherit; cursor: pointer; border: none; }
 }
 .btn-ghost:hover { border-color: var(--white); background: rgba(255,255,255,0.05); }
 
-/* Hero trust bar */
 .hero-trust {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 12px;
-  margin-top: auto;
+  align-items: center;
+  gap: 32px;
+  margin-top: 40px;
 }
 
 .hero-trust-item {
@@ -236,8 +323,8 @@ button { font-family: inherit; cursor: pointer; border: none; }
 }
 
 .hero-trust-item + .hero-trust-item {
-  padding-left: 0;
-  border-left: none;
+  padding-left: 32px;
+  border-left: 1px solid rgba(255,255,255,0.15);
 }
 
 .trust-stars {
@@ -301,7 +388,7 @@ section { padding: 100px 0; }
 /* ===================== SERVICES ===================== */
 .services {
   background: var(--dark);
-  padding: 100px 0 80px;
+  padding: 140px 0 80px;
   overflow: hidden;
 }
 
@@ -701,11 +788,21 @@ section { padding: 100px 0; }
   .mobile-sticky { display: block; }
   body { padding-bottom: 52px; }
 
-  .hero { height: calc(100vh - 56px); max-height: none; }
-  .hero-title { font-size: 36px; max-width: 100%; }
-  .hero-desc { max-width: 100%; }
-  .hero-actions { flex-direction: column; align-items: flex-start; }
-  .hero-trust { flex-wrap: wrap; gap: 20px; }
+  .hero { padding: 40px 0 0; }
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .hero-form-card {
+    margin-bottom: 0;
+    padding: 28px 20px;
+  }
+  .hero-title { font-size: 30px; }
+  .hero-desc { font-size: 15px; }
+  .hero-actions { flex-direction: column; align-items: stretch; }
+  .hero-actions .btn-blue,
+  .hero-actions .btn-ghost { text-align: center; }
+  .hero-trust { flex-wrap: wrap; gap: 20px; margin-top: 28px; }
   .hero-trust-item + .hero-trust-item { padding-left: 0; border-left: none; }
 
   .services-grid.coatings-grid,
@@ -785,39 +882,68 @@ section { padding: 100px 0; }
 <!-- HERO -->
 <section class="hero">
   <div class="hero-bg"></div>
-  <div class="hero-content">
-    <h1 class="hero-title">Carpet Cleaning &amp; Epoxy Flooring in Northeast Indiana</h1>
-    <div class="hero-actions">
-      <a href="/contact" class="btn-blue">Get a Free Quote</a>
-      <a href="tel:+12603431775" class="btn-ghost">(260) 343-1775</a>
-    </div>
-    <div class="hero-trust">
-      <div class="hero-trust-item">
-        <img src="images/bbb-logo.svg" alt="BBB A+ Rating" class="bbb-logo-hero">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-tag">NE Indiana Floor Care</div>
+      <h1 class="hero-title">Carpet Cleaning &amp; Epoxy Flooring Done Right</h1>
+      <p class="hero-desc">
+        From deep carpet extraction to showroom-finish epoxy, we've been
+        taking care of floors across Fort Wayne, Kendallville, and
+        northeast Indiana for over 10 years.
+      </p>
+      <div class="hero-actions">
+        <a href="tel:+12603431775" class="btn-ghost">(260) 343-1775</a>
       </div>
-      <div class="hero-trust-item">
-        <img src="images/google-icon.svg" alt="Google" class="trust-google-icon">
-        <div>
-          <div class="trust-stars">
-            <span class="trust-star">&#9733;</span>
-            <span class="trust-star">&#9733;</span>
-            <span class="trust-star">&#9733;</span>
-            <span class="trust-star">&#9733;</span>
-            <span class="trust-star">&#9733;</span>
+      <div class="hero-trust">
+        <div class="hero-trust-item">
+          <img src="images/bbb-logo.svg" alt="BBB A+ Rating" class="bbb-logo-hero">
+        </div>
+        <div class="hero-trust-item">
+          <img src="images/google-icon.svg" alt="Google" class="trust-google-icon">
+          <div>
+            <div class="trust-stars">
+              <span class="trust-star">&#9733;</span>
+              <span class="trust-star">&#9733;</span>
+              <span class="trust-star">&#9733;</span>
+              <span class="trust-star">&#9733;</span>
+              <span class="trust-star">&#9733;</span>
+            </div>
+            <div class="trust-item-text">5-Star Rated on Google</div>
           </div>
-          <div class="trust-item-text">5-Star Rated on Google</div>
+        </div>
+        <div class="hero-trust-item">
+          <div class="trust-floors-num">500+</div>
+          <div class="trust-item-text">Floors Completed</div>
         </div>
       </div>
-      <div class="hero-trust-item">
-        <div class="trust-floors-num">500+</div>
-        <div class="trust-item-text">Floors Completed</div>
-      </div>
     </div>
-    <p class="hero-desc">
-      From deep carpet extraction to showroom-finish epoxy — we've been
-      taking care of floors across Fort Wayne, Kendallville, and NE Indiana
-      for over 10 years.
-    </p>
+    <div class="hero-form-card">
+      <h2>Get a Free Quote</h2>
+      <p class="form-sub">Tell us about your project and we'll get back to you within a few hours.</p>
+      <form>
+        <label for="hero-name">Name</label>
+        <input type="text" id="hero-name" name="name" placeholder="Your name" required>
+        <label for="hero-email">Email</label>
+        <input type="email" id="hero-email" name="email" placeholder="you@email.com" required>
+        <label for="hero-service">Service Needed</label>
+        <select id="hero-service" name="service" required>
+          <option value="" disabled selected>Select a service</option>
+          <option value="carpet-cleaning">Carpet Cleaning</option>
+          <option value="epoxy-flooring">Epoxy Flooring</option>
+          <option value="metallic-epoxy">Metallic &amp; Marble Epoxy</option>
+          <option value="concrete-coatings">Concrete Coatings</option>
+          <option value="tile-grout">Tile &amp; Grout Cleaning</option>
+          <option value="tile-resurfacing">Tile Resurfacing</option>
+          <option value="floor-waxing">Floor Waxing</option>
+          <option value="upholstery">Upholstery Cleaning</option>
+          <option value="commercial">Commercial Flooring</option>
+          <option value="other">Other</option>
+        </select>
+        <label for="hero-message">Project Details</label>
+        <textarea id="hero-message" name="message" placeholder="Brief description of your project"></textarea>
+        <button type="submit" class="hero-form-submit">Request My Free Quote</button>
+      </form>
+    </div>
   </div>
 </section>
 
