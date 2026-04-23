@@ -129,18 +129,22 @@ button { font-family: inherit; cursor: pointer; border: none; }
 .menu-toggle span:nth-child(3) { top: 18px; }
 
 /* ===================== HERO ===================== */
-.hero {
+.hero-wrap {
   margin-top: var(--header-h);
   position: relative;
-  overflow: visible;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
   background: var(--dark);
-  padding: 80px 0 120px;
+  height: 480px;
 }
 
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: url('images/svc-metallic-epoxy-blue.webp') center/cover no-repeat;
+  background: url('images/hero-metallic-epoxy-hd.webp') center/cover no-repeat;
 }
 
 .hero-bg::after {
@@ -148,8 +152,8 @@ button { font-family: inherit; cursor: pointer; border: none; }
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(to right, rgba(10,10,10,0.93) 0%, rgba(10,10,10,0.75) 45%, rgba(10,10,10,0.5) 100%),
-    linear-gradient(to top, rgba(10,10,10,0.6) 0%, transparent 50%);
+    linear-gradient(to right, rgba(10,10,10,0.88) 0%, rgba(10,10,10,0.55) 50%, rgba(10,10,10,0.25) 100%),
+    linear-gradient(to top, rgba(10,10,10,0.5) 0%, transparent 40%);
 }
 
 .hero-inner {
@@ -159,27 +163,13 @@ button { font-family: inherit; cursor: pointer; border: none; }
   width: 100%;
   margin: 0 auto;
   padding: 0 24px;
-  display: grid;
-  grid-template-columns: 1fr 420px;
-  gap: 60px;
-  align-items: start;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .hero-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-top: 20px;
-}
-
-.hero-tag {
-  font-family: var(--ff-body);
-  font-weight: 600;
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 2.5px;
-  color: var(--blue-light);
-  margin-bottom: 20px;
+  max-width: 550px;
 }
 
 .hero-title {
@@ -188,112 +178,82 @@ button { font-family: inherit; cursor: pointer; border: none; }
   font-size: clamp(34px, 4.5vw, 52px);
   line-height: 1.1;
   color: var(--white);
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .hero-desc {
   font-family: var(--ff-body);
   font-weight: 300;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.7;
   color: var(--gray-300);
 }
 
-.hero-actions { display: flex; gap: 12px; align-items: center; margin-top: 28px; }
-
-/* Hero form card */
-.hero-form-card {
-  background: var(--white);
-  padding: 36px 32px;
-  box-shadow: 0 16px 48px rgba(0,0,0,0.25);
-  margin-bottom: -80px;
-  position: relative;
-  z-index: 3;
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-top: 24px;
 }
 
-.hero-form-card h2 {
+/* Trust section below hero */
+.hero-below {
+  background: var(--white);
+  padding: 60px 0 40px;
+  position: relative;
+  z-index: 1;
+  min-height: calc(100vh - var(--header-h) - 480px - 50px);
+}
+
+.hero-below-inner {
+  max-width: 550px;
+}
+
+.hero-below-title {
   font-family: var(--ff-heading);
   font-weight: 700;
-  font-size: 22px;
-  color: var(--black);
-  margin-bottom: 6px;
+  font-size: 24px;
+  color: var(--blue);
+  margin-bottom: 28px;
 }
 
-.hero-form-card .form-sub {
-  font-family: var(--ff-body);
-  font-size: 14px;
-  color: var(--gray-600);
-  margin-bottom: 24px;
-  line-height: 1.5;
+.hero-below-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
 }
 
-.hero-form-card label {
-  display: block;
+.hero-below-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.hero-below-item .hb-icon {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+}
+
+.hero-below-item span {
   font-family: var(--ff-heading);
   font-weight: 600;
-  font-size: 12px;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  color: var(--dark);
-  margin-bottom: 6px;
-}
-
-.hero-form-card input,
-.hero-form-card select,
-.hero-form-card textarea {
-  width: 100%;
-  font-family: var(--ff-body);
   font-size: 15px;
   color: var(--dark);
-  background: var(--off-white);
-  border: 1px solid var(--gray-200);
-  padding: 13px 14px;
-  margin-bottom: 16px;
-  border-radius: 0;
-  -webkit-appearance: none;
-  appearance: none;
-  transition: border-color 0.2s;
 }
 
-.hero-form-card input:focus,
-.hero-form-card select:focus,
-.hero-form-card textarea:focus {
-  outline: none;
-  border-color: var(--blue);
+/* Hero form card - positioned to overlap hero and next section */
+.hero-form-card {
+  position: absolute;
+  top: 120px;
+  right: calc((100% - 1140px) / 2 + 24px);
+  width: 420px;
+  background: var(--white);
+  padding: 8px;
+  box-shadow: 0 16px 48px rgba(0,0,0,0.2);
+  z-index: 10;
 }
 
-.hero-form-card select {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236b6560' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 14px center;
-  padding-right: 36px;
-  cursor: pointer;
-}
-
-.hero-form-card textarea {
-  min-height: 80px;
-  resize: vertical;
-}
-
-.hero-form-submit {
-  width: 100%;
-  font-family: var(--ff-heading);
-  font-weight: 600;
-  font-size: 14px;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  color: var(--white);
-  background: var(--blue);
-  border: none;
-  padding: 16px;
-  cursor: pointer;
-  transition: background 0.2s;
-  margin-top: 4px;
-}
-
-.hero-form-submit:hover {
-  background: var(--blue-dark);
-}
 
 .btn-blue {
   font-family: var(--ff-body); font-weight: 600; font-size: 14px;
@@ -388,7 +348,7 @@ section { padding: 100px 0; }
 /* ===================== SERVICES ===================== */
 .services {
   background: var(--dark);
-  padding: 140px 0 80px;
+  padding: 35px 0 80px;
   overflow: hidden;
 }
 
@@ -788,23 +748,26 @@ section { padding: 100px 0; }
   .mobile-sticky { display: block; }
   body { padding-bottom: 52px; }
 
-  .hero { padding: 40px 0 0; }
-  .hero-inner {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-  .hero-form-card {
-    margin-bottom: 0;
-    padding: 28px 20px;
-  }
-  .hero-title { font-size: 30px; }
-  .hero-desc { font-size: 15px; }
+  .hero { height: auto; min-height: 0; padding-bottom: 0; }
+  .hero-inner { padding-bottom: 40px; height: auto; }
+  .hero-content { padding: 40px 0; }
+  .hero-title { font-size: 28px; }
+  .hero-desc { font-size: 14px; }
   .hero-actions { flex-direction: column; align-items: stretch; }
   .hero-actions .btn-blue,
   .hero-actions .btn-ghost { text-align: center; }
-  .hero-trust { flex-wrap: wrap; gap: 20px; margin-top: 28px; }
-  .hero-trust-item + .hero-trust-item { padding-left: 0; border-left: none; }
+  .hero-form-card {
+    position: static;
+    width: auto;
+    margin: -40px 24px 0;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  }
+  .hero-below { padding: 40px 0 48px; min-height: auto; }
+  .hero-below-grid { grid-template-columns: 1fr; gap: 18px; }
+  .hero-below-item { gap: 14px; padding: 6px 0; }
+  .hero-below-title { font-size: 20px; }
 
+  .services { padding-top: 64px; }
   .services-grid.coatings-grid,
   .services-grid.cleaning-grid { grid-template-columns: 1fr; }
   .services-grid.coatings-grid .svc-card,
@@ -897,76 +860,88 @@ src="https://www.facebook.com/tr?id=1614993289805530&ev=PageView&noscript=1"
 </header>
 
 <!-- HERO -->
-<section class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-inner">
-    <div class="hero-content">
-      <div class="hero-tag">NE Indiana Floor Care</div>
-      <h1 class="hero-title">Carpet Cleaning &amp; Epoxy Flooring Done Right</h1>
-      <p class="hero-desc">
-        From deep carpet extraction to showroom-finish epoxy, we've been
-        taking care of floors across Fort Wayne, Kendallville, and
-        northeast Indiana for over 10 years.
-      </p>
-      <div class="hero-actions">
-        <a href="tel:+12603431775" class="btn-ghost">(260) 343-1775</a>
-      </div>
-      <div class="hero-trust">
-        <div class="hero-trust-item">
-          <img src="images/bbb-logo.svg" alt="BBB A+ Rating" class="bbb-logo-hero">
+<div class="hero-wrap">
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-inner">
+      <div class="hero-content">
+        <h1 class="hero-title">Carpet Cleaning &amp; Epoxy Flooring Done Right</h1>
+        <p class="hero-desc">From deep carpet extraction to showroom-finish epoxy, we've been taking care of floors across northeast Indiana for over 10 years.</p>
+        <div class="hero-actions">
+          <a href="tel:+12603431775" class="btn-blue">(260) 343-1775</a>
+          <a href="/contact" class="btn-ghost">Get a Free Quote</a>
         </div>
-        <div class="hero-trust-item">
-          <img src="images/google-icon.svg" alt="Google" class="trust-google-icon">
-          <div>
-            <div class="trust-stars">
-              <span class="trust-star">&#9733;</span>
-              <span class="trust-star">&#9733;</span>
-              <span class="trust-star">&#9733;</span>
-              <span class="trust-star">&#9733;</span>
-              <span class="trust-star">&#9733;</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero-below">
+    <div class="container">
+      <div class="hero-below-inner">
+        <h2 class="hero-below-title">Experience and quality you can count on</h2>
+        <div class="hero-below-grid">
+          <div class="hero-below-item">
+            <img src="images/bbb-logo.svg" alt="BBB A+ Rating" style="height:40px;width:auto;">
+            <span>BBB A+ Accredited</span>
+          </div>
+          <div class="hero-below-item">
+            <img src="images/google-icon.svg" alt="Google" style="width:28px;height:28px;">
+            <div>
+              <div class="trust-stars" style="margin-bottom:2px;">
+                <span class="trust-star">&#9733;</span>
+                <span class="trust-star">&#9733;</span>
+                <span class="trust-star">&#9733;</span>
+                <span class="trust-star">&#9733;</span>
+                <span class="trust-star">&#9733;</span>
+              </div>
+              <span>5-Star Rated on Google</span>
             </div>
-            <div class="trust-item-text">5-Star Rated on Google</div>
+          </div>
+          <div class="hero-below-item">
+            <div class="trust-floors-num" style="color:var(--blue);">500+</div>
+            <span>Floors Completed</span>
+          </div>
+          <div class="hero-below-item">
+            <div class="trust-floors-num" style="color:var(--blue);">10+</div>
+            <span>Years Experience</span>
           </div>
         </div>
-        <div class="hero-trust-item">
-          <div class="trust-floors-num">500+</div>
-          <div class="trust-item-text">Floors Completed</div>
-        </div>
       </div>
     </div>
-    <div class="hero-form-card">
-      <iframe
-        src="https://go.otterclick.com/widget/form/rZDQfmc65gC2i3u8jTk6"
-        style="width:100%;height:100%;border:none;border-radius:10px"
-        id="inline-rZDQfmc65gC2i3u8jTk6"
-        data-layout="{'id':'INLINE'}"
-        data-trigger-type="alwaysShow"
-        data-trigger-value=""
-        data-activation-type="alwaysActivated"
-        data-activation-value=""
-        data-deactivation-type="neverDeactivate"
-        data-deactivation-value=""
-        data-form-name="Website Form"
-        data-height="590"
-        data-layout-iframe-id="inline-rZDQfmc65gC2i3u8jTk6"
-        data-form-id="rZDQfmc65gC2i3u8jTk6"
-        title="Website Form"
-      ></iframe>
-      <script src="https://go.otterclick.com/js/form_embed.js"></script>
-    </div>
+  </section>
+
+  <div class="hero-form-card">
+    <iframe
+      src="https://go.otterclick.com/widget/form/rZDQfmc65gC2i3u8jTk6"
+      style="width:100%;height:100%;border:none;border-radius:10px"
+      id="inline-rZDQfmc65gC2i3u8jTk6"
+      data-layout="{'id':'INLINE'}"
+      data-trigger-type="alwaysShow"
+      data-trigger-value=""
+      data-activation-type="alwaysActivated"
+      data-activation-value=""
+      data-deactivation-type="neverDeactivate"
+      data-deactivation-value=""
+      data-form-name="Website Form"
+      data-height="590"
+      data-layout-iframe-id="inline-rZDQfmc65gC2i3u8jTk6"
+      data-form-id="rZDQfmc65gC2i3u8jTk6"
+      title="Website Form"
+    ></iframe>
+    <script src="https://go.otterclick.com/js/form_embed.js"></script>
   </div>
-</section>
+</div>
 
 <!-- SERVICES -->
 <section class="services" id="services">
   <div class="container">
-    <div class="services-header reveal">
+    <div class="services-header">
       <p class="section-tag">Our Services</p>
       <h2 class="section-title">Coatings &amp; Epoxy</h2>
     </div>
 
     <div class="services-grid coatings-grid">
-      <a href="/services/metallic-and-marble-epoxy" class="svc-card reveal">
+      <a href="/services/metallic-and-marble-epoxy" class="svc-card">
         <div class="svc-card-bg" style="background-image:url('images/tile-metallic-epoxy.webp')"></div>
         <span class="svc-card-arrow">&#8594;</span>
         <div class="svc-card-content">
@@ -975,7 +950,7 @@ src="https://www.facebook.com/tr?id=1614993289805530&ev=PageView&noscript=1"
         </div>
       </a>
 
-      <a href="/services/epoxy-flooring" class="svc-card reveal">
+      <a href="/services/epoxy-flooring" class="svc-card">
         <div class="svc-card-bg" style="background-image:url('images/tile-epoxy-flooring.webp')"></div>
         <span class="svc-card-arrow">&#8594;</span>
         <div class="svc-card-content">
@@ -984,7 +959,7 @@ src="https://www.facebook.com/tr?id=1614993289805530&ev=PageView&noscript=1"
         </div>
       </a>
 
-      <a href="/services/industrial-flooring" class="svc-card reveal">
+      <a href="/services/industrial-flooring" class="svc-card">
         <div class="svc-card-bg" style="background-image:url('images/tile-industrial-flooring.webp')"></div>
         <span class="svc-card-arrow">&#8594;</span>
         <div class="svc-card-content">
@@ -993,7 +968,7 @@ src="https://www.facebook.com/tr?id=1614993289805530&ev=PageView&noscript=1"
         </div>
       </a>
 
-      <a href="/services/commercial-flooring" class="svc-card reveal">
+      <a href="/services/commercial-flooring" class="svc-card">
         <div class="svc-card-bg" style="background-image:url('images/tile-commercial-flooring.webp')"></div>
         <span class="svc-card-arrow">&#8594;</span>
         <div class="svc-card-content">
@@ -1002,7 +977,7 @@ src="https://www.facebook.com/tr?id=1614993289805530&ev=PageView&noscript=1"
         </div>
       </a>
 
-      <a href="/services/decorative-concrete" class="svc-card reveal">
+      <a href="/services/decorative-concrete" class="svc-card">
         <div class="svc-card-bg" style="background-image:url('images/tile-decorative-concrete.webp')"></div>
         <span class="svc-card-arrow">&#8594;</span>
         <div class="svc-card-content">
@@ -1011,7 +986,7 @@ src="https://www.facebook.com/tr?id=1614993289805530&ev=PageView&noscript=1"
         </div>
       </a>
 
-      <a href="/services/concrete-coatings" class="svc-card reveal">
+      <a href="/services/concrete-coatings" class="svc-card">
         <div class="svc-card-bg" style="background-image:url('images/tile-concrete-coatings.webp')"></div>
         <span class="svc-card-arrow">&#8594;</span>
         <div class="svc-card-content">
@@ -1021,12 +996,12 @@ src="https://www.facebook.com/tr?id=1614993289805530&ev=PageView&noscript=1"
       </a>
     </div>
 
-    <div class="services-header reveal" style="margin-top:64px;">
+    <div class="services-header" style="margin-top:64px;">
       <h2 class="section-title">Cleaning &amp; Maintenance</h2>
     </div>
 
     <div class="services-grid cleaning-grid">
-      <a href="/services/tile-resurfacing" class="svc-card reveal">
+      <a href="/services/tile-resurfacing" class="svc-card">
         <div class="svc-card-bg" style="background-image:url('images/tile-tile-resurfacing.webp')"></div>
         <span class="svc-card-arrow">&#8594;</span>
         <div class="svc-card-content">
@@ -1035,7 +1010,7 @@ src="https://www.facebook.com/tr?id=1614993289805530&ev=PageView&noscript=1"
         </div>
       </a>
 
-      <a href="/services/tile-and-grout-cleaning" class="svc-card reveal">
+      <a href="/services/tile-and-grout-cleaning" class="svc-card">
         <div class="svc-card-bg" style="background-image:url('images/tile-tile-grout.webp')"></div>
         <span class="svc-card-arrow">&#8594;</span>
         <div class="svc-card-content">
@@ -1044,7 +1019,7 @@ src="https://www.facebook.com/tr?id=1614993289805530&ev=PageView&noscript=1"
         </div>
       </a>
 
-      <a href="/services/carpet-cleaning" class="svc-card reveal">
+      <a href="/services/carpet-cleaning" class="svc-card">
         <div class="svc-card-bg" style="background-image:url('images/tile-carpet-cleaning.webp')"></div>
         <span class="svc-card-arrow">&#8594;</span>
         <div class="svc-card-content">
@@ -1053,7 +1028,7 @@ src="https://www.facebook.com/tr?id=1614993289805530&ev=PageView&noscript=1"
         </div>
       </a>
 
-      <a href="/services/floor-waxing" class="svc-card reveal">
+      <a href="/services/floor-waxing" class="svc-card">
         <div class="svc-card-bg" style="background-image:url('images/tile-floor-waxing.webp')"></div>
         <span class="svc-card-arrow">&#8594;</span>
         <div class="svc-card-content">
@@ -1062,7 +1037,7 @@ src="https://www.facebook.com/tr?id=1614993289805530&ev=PageView&noscript=1"
         </div>
       </a>
 
-      <a href="/services/upholstery-cleaning" class="svc-card reveal">
+      <a href="/services/upholstery-cleaning" class="svc-card">
         <div class="svc-card-bg" style="background-image:url('images/tile-upholstery.webp')"></div>
         <span class="svc-card-arrow">&#8594;</span>
         <div class="svc-card-content">
@@ -1072,7 +1047,7 @@ src="https://www.facebook.com/tr?id=1614993289805530&ev=PageView&noscript=1"
       </a>
     </div>
 
-    <div class="services-view-all reveal">
+    <div class="services-view-all">
       <a href="/services">View all services &#8594;</a>
     </div>
   </div>
@@ -1082,7 +1057,7 @@ src="https://www.facebook.com/tr?id=1614993289805530&ev=PageView&noscript=1"
 <section class="trust" id="trust">
   <div class="trust-overlap">
     <div class="container">
-      <div class="trust-team reveal">
+      <div class="trust-team">
         <div class="trust-team-img">
           <img src="images/team-jakes-crew.webp" alt="Jake Lazzarino and the Jake's Floor Care team in Wolcottville, Indiana" width="300" height="200" loading="lazy">
         </div>
@@ -1098,19 +1073,19 @@ src="https://www.facebook.com/tr?id=1614993289805530&ev=PageView&noscript=1"
       </div>
 
       <div class="testimonials">
-        <div class="testimonial reveal">
+        <div class="testimonial">
           <p class="testimonial-text">"We've used Jake's for several years now. Friendly, punctual, professional — they do good work every time."</p>
           <span class="testimonial-author">Repeat customer</span>
         </div>
-        <div class="testimonial reveal">
+        <div class="testimonial">
           <p class="testimonial-text">"The concrete coating they put down looked like a showroom floor. Jake was great about answering all my questions."</p>
           <span class="testimonial-author">Epoxy customer</span>
         </div>
-        <div class="testimonial reveal">
+        <div class="testimonial">
           <p class="testimonial-text">"On a scale of one to ten, I'd give Jake a twelve. Most personable guy I've dealt with in 76 years."</p>
           <span class="testimonial-author">Verified customer</span>
         </div>
-        <div class="testimonial reveal">
+        <div class="testimonial">
           <p class="testimonial-text">"Prompt and thorough. Great follow up. Would recommend to anyone needing floor work done."</p>
           <span class="testimonial-author">Fort Wayne customer</span>
         </div>
@@ -1132,7 +1107,7 @@ src="https://www.facebook.com/tr?id=1614993289805530&ev=PageView&noscript=1"
         </p>
         <a href="tel:+12603431775" class="btn-blue">(260) 343-1775</a>
       </div>
-      <ul class="areas-list reveal">
+      <ul class="areas-list">
         <li><a href="/service-areas/fort-wayne">Fort Wayne <span class="areas-arrow">&#8594;</span></a></li>
         <li><a href="/service-areas/kendallville">Kendallville <span class="areas-arrow">&#8594;</span></a></li>
         <li><a href="/service-areas/auburn">Auburn <span class="areas-arrow">&#8594;</span></a></li>
@@ -1150,7 +1125,7 @@ src="https://www.facebook.com/tr?id=1614993289805530&ev=PageView&noscript=1"
 
 <!-- CTA -->
 <section class="cta-band">
-  <div class="container reveal">
+  <div class="container">
     <h2 class="cta-title">Need a quote? Just call.</h2>
     <p class="cta-sub">Free estimates, no pressure. We'll come take a look and give you an honest price.</p>
     <a href="/contact" class="btn-white">Get a Free Quote</a>
